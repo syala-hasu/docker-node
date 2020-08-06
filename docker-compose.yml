@@ -8,3 +8,11 @@ services:
     tty: true
     volumes:
       - ./workspace:/root/workspace
+  node:
+    hostname: "Node!!"
+    build:
+      context: ./docker/node
+      dockerfile: Dockerfile
+    tty: true
+    volumes:
+      - ./workspace/node:/node
